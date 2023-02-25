@@ -13,6 +13,8 @@ body, p, h1, h2, h3, h4, h5, h6 {
 body {
     color: var(--default-font-color);
     background-color: rgb(30, 30, 30);
+    display: grid;
+    grid-template-columns: 1fr 5fr;
 }
 
 .icon {
@@ -54,12 +56,6 @@ a {
 
 .sidebar {
     background-color: rgb(255, 140, 0);
-}
-
-
-.contents {
-    display: grid;
-    grid-template-columns: 1fr 5fr;
 }
 
 .sidebar {
@@ -172,4 +168,47 @@ main {
     color: var(--default-font-color);
     cursor: pointer;
     padding: 0.25em 0.5em;
+}
+
+.contents {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+.projects h3 {
+    grid-column: 1 / -1;
+}
+
+.card {
+    padding: 5px;
+    border: solid 2px;
+    border-radius: 5px;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 5px 1fr 1fr;
+}
+
+.decoration {
+    grid-row: 1 / 4;
+    background-color: var(--default-font-color);
+}
+
+.card p, .card h3 {
+    grid-column: 2 / -1;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-self: end;
+
+    grid-column: 2 / 4;
 }

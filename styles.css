@@ -7,12 +7,95 @@ body, p, h1, h2, h3, h4, h5, h6, ul {
     margin: 0;
 }
 
+@media(max-width: 1000px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 0.5em;
+    }
+
+    .notification-area {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .navbar-buttons {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .navbar-buttons :last-child{
+        margin-left: auto;
+    }
+
+    .searchbar {
+        width: 80vw;
+        max-width: 15rem;
+        margin-right: 2vw;
+    }
+}
+
+@media(min-width: 1000px) {
+    body {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+    }
+    
+    .sidebar {
+        flex-direction: column;
+    }
+    .projects {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .contents {  
+        grid-template-columns: 4fr 1fr;
+    }
+
+    .navbar {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        position: sticky;
+        top: 0;
+        align-items: center;
+    }
+    .notification-area {
+        display: grid;
+        grid-template-columns:  2fr min-content;
+        align-items: center;
+        justify-self: end;
+    }
+
+    .searchbar {
+        width: 100%;
+    }
+    
+}
 
 body {
     color: var(--deep-orange);
     background-color: rgb(30, 30, 30);
-    display: grid;
-    grid-template-columns: 1fr 5fr;
     font-family: 'Labrada', serif;
 }
 
@@ -46,7 +129,6 @@ li {
     padding: 10px;
     background-color: var(--deep-orange);
     display: flex;
-    flex-direction: column;
 }
 
 .sidebar h1 {
@@ -113,11 +195,6 @@ main {
 }
 
 .navbar {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    position: sticky;
-    top: 0;
-    align-items: center;
     border-left: var(--dark-grey) solid 2px;
     padding: 0.25rem;
     background-color: var(--deep-orange);
@@ -149,21 +226,10 @@ main {
     border-radius: 1rem;
     background-color: var(--dark-grey);
     color: var(--deep-orange);
-    width: 100%;
 }
 
 .notification-area {
-    display: grid;
-    grid-template-columns:  2fr min-content;
     gap: 0.5em;
-    align-items: center;
-    justify-self: end;
-}
-
-.welcome {
-    display: flex;
-    align-items: center;
-    margin-right: auto;
 }
 
 .navbar button {
@@ -185,14 +251,12 @@ main {
 
 .contents {
     display: grid;
-    grid-template-columns: 4fr 1fr;
     padding: 1rem;
     gap: 2rem;
 }
 
 .projects {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
 }
 

@@ -23,14 +23,15 @@ body, p, h1, h2, h3, h4, h5, h6, ul {
 
     .sidebar ul {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
     .navbar {
         display: flex;
         flex-direction: column-reverse;
         align-items: flex-start;
-        gap: 0.5em;
+        gap: 1em;
+        padding: 1em;
     }
 
     .notification-area {
@@ -43,6 +44,10 @@ body, p, h1, h2, h3, h4, h5, h6, ul {
         display: flex;
         justify-content: space-around;
         width: 100%;
+    }
+
+    .navbar button {
+        margin-right: 1em;
     }
 
     .navbar-buttons :last-child{
@@ -74,12 +79,19 @@ body, p, h1, h2, h3, h4, h5, h6, ul {
     }
 
     .navbar {
+        border-left: var(--dark-grey) solid 2px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         position: sticky;
         top: 0;
         align-items: center;
+        padding: 0.25rem;
     }
+
+    .navbar button { 
+        margin: 0.5em;
+    }
+
     .notification-area {
         display: grid;
         grid-template-columns:  2fr min-content;
@@ -131,10 +143,6 @@ li {
     display: flex;
 }
 
-.sidebar h1 {
-    position: relative;
-}
-
 .sidebar-box {
     margin-top: 1rem;
     position: sticky;
@@ -159,13 +167,13 @@ li a img {
 
 .sidebar-title {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .logo {
     display: grid;
-    height: 3vmax;
-    width: 3vmax;
+    height: 3rem;
+    width: 3rem;
     gap: 2px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -195,8 +203,6 @@ main {
 }
 
 .navbar {
-    border-left: var(--dark-grey) solid 2px;
-    padding: 0.25rem;
     background-color: var(--deep-orange);
     color: var(--dark-grey);
     border-bottom-right-radius: 0.5rem;
@@ -234,7 +240,6 @@ main {
 
 .navbar button {
     background-color: var(--dark-grey);
-    margin: 0.5em;
     font-size: 1rem;
     color: var(--deep-orange);
     cursor: pointer;

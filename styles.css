@@ -1,6 +1,7 @@
 :root {
     --default-font-family: 'Times New Roman', Times, serif;
     --default-font-color: darkorange;
+    --dark-grey: rgb(30, 30, 30);
 
     font-family: var(--default-font-family);
 }
@@ -15,8 +16,10 @@ body {
 }
 
 .icon {
+    min-height: 1.5rem;
     max-height: 2rem;
     max-width: auto;
+    cursor: pointer;
 }
 
 .sidebar {
@@ -50,7 +53,7 @@ a {
 }
 
 .sidebar {
-    background-color: darkorange;
+    background-color: rgb(255, 140, 0);
 }
 
 
@@ -97,8 +100,76 @@ a {
 }
 
 .icon-sidebar {
-    fill: red;
+    fill: rgb(152, 152, 152);
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+}
 
-/* next: color svgs, then commit */
+.navbar, .navbar-top, .navbar-bottom {
+    display: flex;
+}
+
+.navbar-top, .navbar-bottom {
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+}
+
+.navbar {
+    padding: 1rem;
+    flex-direction: column;
+    background-color: rgb(208, 116, 3);
+    color: var(--dark-grey);
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+
+}
+
+.profile-picture {
+    max-height: 5rem;
+}
+
+.navbar-top > * {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-top input {
+    width: 30vw;
+}
+
+.notification-area {
+    gap: 1rem;
+    font-weight: bold;
+}
+
+.small {
+    max-height: 2rem;
+}
+
+.searchbar {
+    height: 1.5rem;
+    border-radius: 1rem;
+    background-color: var(--dark-grey);
+    color: var(--default-font-color);
+}
+
+.welcome {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.navbar button {
+    background-color: var(--dark-grey);
+    border: 0;
+    border-radius: 1em;
+    margin: 0.5em;
+    font-size: 1rem;
+    color: var(--default-font-color);
+    cursor: pointer;
+    padding: 0.25em 0.5em;
+}

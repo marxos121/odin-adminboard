@@ -1,17 +1,17 @@
 :root {
     --default-font-family: 'Times New Roman', Times, serif;
-    --default-font-color: darkorange;
+    --deep-orange: darkorange;
     --dark-grey: rgb(30, 30, 30);
 
     font-family: var(--default-font-family);
 }
 
-body, p, h1, h2, h3, h4, h5, h6 {
+body, p, h1, h2, h3, h4, h5, h6, ul {
     margin: 0;
 }
 
 body {
-    color: var(--default-font-color);
+    color: var(--deep-orange);
     background-color: rgb(30, 30, 30);
     display: grid;
     grid-template-columns: 1fr 5fr;
@@ -27,6 +27,12 @@ body {
 .sidebar {
     display: grid;
     padding: 10px;
+}
+
+.sidebar-box {
+    margin-top: 1rem;
+    position: sticky;
+    top: 0px;;
 }
 
 ul {
@@ -50,12 +56,12 @@ li a img {
 }
 
 a {
-    color: var(--default-font-color);
+    color: var(--deep-orange);
     text-decoration: none;
 }
 
 .sidebar {
-    background-color: rgb(255, 140, 0);
+    background-color: var(--deep-orange);
 }
 
 .sidebar {
@@ -84,7 +90,7 @@ a {
 }
 
 .logo > * {
-    background-color: rgb(30, 30, 30);
+    background-color: var(--dark-grey);
 }
 
 .logo :first-child{
@@ -115,9 +121,10 @@ main {
 }
 
 .navbar {
+    border-left: var(--dark-grey) solid 2px;
     padding: 1rem;
     flex-direction: column;
-    background-color: rgb(208, 116, 3);
+    background-color: var(--deep-orange);
     color: var(--dark-grey);
     border-bottom-right-radius: 0.5rem;
     border-bottom-left-radius: 0.5rem;
@@ -150,7 +157,7 @@ main {
     height: 1.5rem;
     border-radius: 1rem;
     background-color: var(--dark-grey);
-    color: var(--default-font-color);
+    color: var(--deep-orange);
 }
 
 .welcome {
@@ -165,7 +172,7 @@ main {
     border-radius: 1em;
     margin: 0.5em;
     font-size: 1rem;
-    color: var(--default-font-color);
+    color: var(--deep-orange);
     cursor: pointer;
     padding: 0.25em 0.5em;
 }
@@ -198,7 +205,7 @@ main {
 
 .decoration {
     grid-row: 1 / 4;
-    background-color: var(--default-font-color);
+    background-color: var(--deep-orange);
 }
 
 .card p, .card h3 {
@@ -228,7 +235,7 @@ main {
     display: grid;
     padding: 1rem;
     gap: 10px;
-    border: 2px var(--default-font-color) solid;
+    border: 2px var(--deep-orange) solid;
 }
 
 .announcements-container > * {

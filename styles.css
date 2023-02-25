@@ -1,20 +1,32 @@
 :root {
-    --default-font-family: 'Times New Roman', Times, serif;
     --deep-orange: darkorange;
     --dark-grey: rgb(30, 30, 30);
-
-    font-family: var(--default-font-family);
 }
 
 body, p, h1, h2, h3, h4, h5, h6, ul {
     margin: 0;
 }
 
+
 body {
     color: var(--deep-orange);
     background-color: rgb(30, 30, 30);
     display: grid;
     grid-template-columns: 1fr 5fr;
+    font-family: 'Labrada', serif;
+}
+
+button, a {
+    font-family: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 1rem;
+}
+
+li {
+    padding-bottom: 0.5rem;
 }
 
 .icon {
@@ -27,21 +39,16 @@ body {
 .sidebar {
     display: grid;
     padding: 10px;
+    background-color: var(--deep-orange);
+    display: flex;
+    flex-direction: column;
 }
 
 .sidebar-box {
     margin-top: 1rem;
     position: sticky;
     top: 0px;;
-}
-
-ul {
-    list-style: none;
-    padding: 1rem;
-}
-
-li {
-    padding-bottom: 0.5rem;
+    font-weight: 700;
 }
 
 li a {
@@ -61,12 +68,6 @@ a {
 }
 
 .sidebar {
-    background-color: var(--deep-orange);
-}
-
-.sidebar {
-    display: flex;
-    flex-direction: column;
 }
 
 .sidebar * {
@@ -168,13 +169,19 @@ main {
 
 .navbar button {
     background-color: var(--dark-grey);
-    border: 0;
-    border-radius: 1em;
     margin: 0.5em;
     font-size: 1rem;
     color: var(--deep-orange);
     cursor: pointer;
     padding: 0.25em 0.5em;
+
+    border:rgba(255, 140, 0, 0.427) 5px solid;
+    border-radius: 1em;
+    border-style: solid;
+}
+
+.navbar-bottom :last-child {
+    margin-right: 0;
 }
 
 .contents {
@@ -264,5 +271,7 @@ main {
 .orange-border {
     border: var(--deep-orange) solid 2px;
     border-radius: 5px;
-    padding: 5px;
+    padding: 10px;
+    box-shadow: 5px 5px rgba(255, 140, 0, 0.427);
+    background-color: rgb(39, 39, 39);
 }
